@@ -9,4 +9,14 @@ class CollectionEdition extends Model
     protected $fillable = [
         'name', 'slug',
     ];
+
+    public function mangas()
+    {
+        return $this->hasMany (Manga::class);
+    }
+    public function codePrixes()
+    {
+        return $this->hasMany (CodePrix::class);
+    }
+
 }
