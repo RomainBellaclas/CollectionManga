@@ -10475,15 +10475,16 @@ body {
   padding-top: 70px;
 }
 
-@font-face{
-    font-family: "japRoman";
-    src: url("../fonts/go3v2.ttf");
+@font-face {
+  font-family: "japRoman";
+  src: url(/fonts/go3v2.ttf?65e1ae41ad95e8bed2ac45adc765795a);
 }
 
 nav {
-    font-family: "japRoman";
+  font-family: "japRoman";
 }
 
 .card-header {
-    font-family: "japRoman";
+  font-family: "japRoman";
 }
+

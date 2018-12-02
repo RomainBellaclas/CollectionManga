@@ -14,3 +14,14 @@
 Auth::routes(['verify' => true]);
 
 Route::get('/', 'HomeController@index')->name('home')->middleware('verified');
+Route::middleware('admin')->group(function () {
+    Route::resource ('publicVise', 'PublicViseController', [
+        'except' => 'show'
+    ]);
+    Route::resource ('collectionEdition', 'CollectionEditionController', [
+        'except' => 'show'
+    ]);
+    Route::resource ('codePrix', 'CodePrixController', [
+        'except' => 'show'
+    ]);
+});

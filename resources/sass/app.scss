@@ -7,7 +7,20 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
 body {
   padding-top: 70px;
 }
 
+@font-face{
+    font-family: "japRoman";
+    src: url("../../public/fonts/go3v2.ttf");
+}
+
+nav {
+    font-family: "japRoman";
+}
+
+.card-header {
+    font-family: "japRoman";
+}

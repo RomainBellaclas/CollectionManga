@@ -17,6 +17,28 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
+            @admin
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle{{ currentRoute(route('collectionEdition.create'))}}" href="#" id="navbarDropdownGestEdiPubCode" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    @lang('Administration')
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownGestEdiPubCode">
+                    <a class="dropdown-item" href="{{ route('collectionEdition.create') }}">
+                        <i class="fas fa-plus fa-lg"></i> @lang("Ajouter une maison d'édition")
+                    </a>
+                    <a class="dropdown-item" href="{{ route('codePrix.create') }}">
+                        <i class="fas fa-plus fa-lg"></i> @lang("Ajouter un code prix")
+                    </a>
+                    <a class="dropdown-item" href="{{ route('publicVise.create') }}">
+                        <i class="fas fa-plus fa-lg"></i> @lang("Ajouter un public de destination")
+                    </a>
+                </div>
+            </li>
+            @endadmin
+        </ul>
+            
+        <ul class="navbar-nav ml-auto">
             @guest
             <li class="nav-item{{ currentRoute(route('login')) }}"><a class="nav-link" href="{{ route('login') }}">@lang('Connexion')</a></li>
             <li class="nav-item{{ currentRoute(route('register')) }}"><a class="nav-link" href="{{ route('register') }}">@lang('Inscription')</a></li>
