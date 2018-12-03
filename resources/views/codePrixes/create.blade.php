@@ -4,6 +4,14 @@
         @slot('title')
             @lang('Ajouter un code prix')
         @endslot
+        <form action="" method="GET">
+            @include('partials.dropdown',[
+                'title' => __("Maison d'édition"),
+                'type' => 'button',
+                'name' => 'idCollectionEdition',
+
+            ]) 
+        </form>
         <form method="POST" action="{{ route('codePrix.store') }}">
             {{ csrf_field() }}
             @include('partials.form-group', [

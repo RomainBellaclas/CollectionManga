@@ -81,4 +81,8 @@ class CollectionEditionController extends Controller
     {
         //
     }
+
+    public function list(CollectionEdition $collectionEdtions){
+        $collectionEdtions = CollectionEdition::lists('name','id');
+    }
 }
